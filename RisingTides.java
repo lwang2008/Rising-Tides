@@ -5,7 +5,6 @@ public class RisingTides {
     public static boolean[][] floodedRegionsIn(double[][] terrain,
                                                GridLocation[] sources,
                                                double height) {
-        
         int rows = terrain.length;
         int cols = terrain[0].length;
         boolean[][] flooded = new boolean[rows][cols];
@@ -25,9 +24,9 @@ public class RisingTides {
             }
         }
         
-        //Defining 4 cardinal directions for each square
-        int[] dr = {-1, 1, 0, 0};
-        int[] dc = {0, 0, -1, 1};
+        //4 cardinal directions for each square
+        int[] dx = {-1, 1, 0, 0};
+        int[] dy = {0, 0, -1, 1};
         
         //BFS 
         while (!queue.isEmpty()) {
@@ -37,8 +36,8 @@ public class RisingTides {
             for (int i = 0; i < 4; i++) {
 
                 //Using 2 lists from above, check 4 adjacent cells
-                int newRow = current.row + dr[i];
-                int newCol = current.col + dc[i];
+                int newRow = current.row + dy[i];
+                int newCol = current.col + dx[i];
                 
                 //Check if the new position is on grid
                 if (newRow >= 0 && newRow < rows && newCol >= 0 && newCol < cols) {
