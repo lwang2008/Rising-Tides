@@ -1,5 +1,5 @@
 # Rising-Tides
-Nifty project which simulates how different terrains look like as sea levels rise.
+Nifty project which simulates how different terrains look as sea levels rise.
 
 http://nifty.stanford.edu/2023/schwarz-rising-tides/
 
